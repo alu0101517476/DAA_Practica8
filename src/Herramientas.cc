@@ -12,9 +12,9 @@ double calcularDistanciaEuclidea(const Punto& punto1, const Punto& punto2) {
 Punto calcularCentro(const std::vector<Punto>& puntos) {
   Punto centroide;
   double suma{0}, dimension{puntos[0].getCoordenadas().size()};
-  for (int j{0}; j < dimension; ++j) {
-    for (int i{0}; i < puntos.size(); ++i) {
-      suma += puntos[i].getCoordenadas()[j];
+  for (int i{0}; i < dimension; ++i) {
+    for (int j{0}; j < puntos.size(); ++j) {
+      suma += puntos[j].getCoordenadas()[i];
     }
     centroide.agregarCoordenada((suma / puntos.size()));
   }
