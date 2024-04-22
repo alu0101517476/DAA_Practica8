@@ -1,7 +1,7 @@
 #include "../include/Herramientas.h"
 
 double calcularDistanciaEuclidea(const Punto& punto1, const Punto& punto2) {
-  int distancia_euclidea{0};
+  double distancia_euclidea{0};
   for (int i{0}; i < punto1.getCoordenadas().size(); ++i) {
     distancia_euclidea +=
         pow(punto1.getCoordenadas()[i] - punto2.getCoordenadas()[i], 2);
@@ -11,13 +11,12 @@ double calcularDistanciaEuclidea(const Punto& punto1, const Punto& punto2) {
 
 Punto calcularCentro(const std::vector<Punto>& puntos) {
   Punto centroide;
-  int suma{0};
-  for (const auto& punto : puntos) {
-    for (int i{0}; i < punto.getCoordenadas().size(); ++i) {
-      suma += punto.getCoordenadas()[i];
+  double suma{0}, dimension{puntos[0].getCoordenadas().size()};
+  for (int j{0}; j < dimension; ++j) {
+    for (int i{0}; i < puntos.size(); ++i) {
+      suma += puntos[i].getCoordenadas()[j];
     }
-    suma /= puntos.size();
-    centroide.agregarCoordenada(suma);
+    centroide.agregarCoordenada((suma / puntos.size()));
   }
   return centroide;
 }
@@ -51,6 +50,6 @@ void imprimirDatosTabla(int size_solucion, const Solucion& solucion,
   printf("%-25s %-5d %-5d %-6d", nombre_fichero.c_str(),
          problema.getNumeroPuntos(), problema.getDimensionPuntos(),
          problema.getSizeSolucion());
-  printf("%.4f %-11s %-2d\n", solucion.getFuncionObjetivo(),
+  printf("%.4f %-11s %-5ldµs\n", solucion.getFuncionObjetivo(),
          pasarPuntosString(solucion).c_str(), tiempo_ejecucion);
 }
