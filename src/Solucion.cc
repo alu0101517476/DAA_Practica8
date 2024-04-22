@@ -5,6 +5,7 @@ void Solucion::agregarPunto(const Punto& punto) {
 }
 
 double Solucion::calcularFuncionObjetivo() {
+  funcion_objetivo_ = 0;
   for (int i{0}; i < solucion_.size(); ++i) {
     for (int j{i + 1}; j < solucion_.size(); ++j) {
       funcion_objetivo_ += calcularDistanciaEuclidea(solucion_[i], solucion_[j]);

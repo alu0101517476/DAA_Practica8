@@ -1,64 +1,64 @@
-                                Algoritmo Voraz
+                Algoritmo Voraz
 Problema                  n     K     m     z        S          CPU
-MAXDIV/max_div_15_2.txt   15    2     2     11.8592  6 8        85   µs
-MAXDIV/max_div_15_2.txt   15    2     3     25.6793  6 8 13     102  µs
-MAXDIV/max_div_15_2.txt   15    2     4     40.4443  6 8 13 10  148  µs
-MAXDIV/max_div_15_2.txt   15    2     5     69.0883  6 8 13 10 0 353  µs
+MAXDIV/max_div_15_2.txt   15    2     2     11.8592  6 8        104  µs
+MAXDIV/max_div_15_2.txt   15    2     3     25.6793  6 8 13     99   µs
+MAXDIV/max_div_15_2.txt   15    2     4     40.4443  6 8 13 10  124  µs
+MAXDIV/max_div_15_2.txt   15    2     5     69.0883  6 8 13 10 0 205  µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_20_2.txt   20    2     2     6.7081  18 13      131  µs
-MAXDIV/max_div_20_2.txt   20    2     3     13.5216  18 13 10   244  µs
-MAXDIV/max_div_20_2.txt   20    2     4     29.7723  18 13 10 2 189  µs
-MAXDIV/max_div_20_2.txt   20    2     5     44.2028  18 13 10 2 7 235  µs
+MAXDIV/max_div_20_2.txt   20    2     2     6.7081  18 13      114  µs
+MAXDIV/max_div_20_2.txt   20    2     3     13.5216  18 13 10   167  µs
+MAXDIV/max_div_20_2.txt   20    2     4     29.7723  18 13 10 2 254  µs
+MAXDIV/max_div_20_2.txt   20    2     5     44.2028  18 13 10 2 7 258  µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_30_2.txt   30    2     2     11.6571  27 8       150  µs
-MAXDIV/max_div_30_2.txt   30    2     3     23.6530  27 8 29    253  µs
-MAXDIV/max_div_30_2.txt   30    2     4     43.3522  27 8 29 10 270  µs
-MAXDIV/max_div_30_2.txt   30    2     5     61.0273  27 8 29 10 13 364  µs
+MAXDIV/max_div_30_2.txt   30    2     2     11.6571  27 8       190  µs
+MAXDIV/max_div_30_2.txt   30    2     3     23.6530  27 8 29    226  µs
+MAXDIV/max_div_30_2.txt   30    2     4     43.3522  27 8 29 10 449  µs
+MAXDIV/max_div_30_2.txt   30    2     5     61.0273  27 8 29 10 13 361  µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_15_3.txt   15    3     2     5.9127  6 8        221  µs
-MAXDIV/max_div_15_3.txt   15    3     3     30.2714  6 8 11     164  µs
-MAXDIV/max_div_15_3.txt   15    3     4     52.7435  6 8 11 13  213  µs
-MAXDIV/max_div_15_3.txt   15    3     5     79.3238  6 8 11 13 2 293  µs
+MAXDIV/max_div_15_3.txt   15    3     2     5.9127  6 8        223  µs
+MAXDIV/max_div_15_3.txt   15    3     3     30.2714  6 8 11     172  µs
+MAXDIV/max_div_15_3.txt   15    3     4     52.7435  6 8 11 13  220  µs
+MAXDIV/max_div_15_3.txt   15    3     5     79.3238  6 8 11 13 2 271  µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_20_3.txt   20    3     2     3.1499  12 11      146  µs
-MAXDIV/max_div_20_3.txt   20    3     3     23.5386  12 11 2    328  µs
-MAXDIV/max_div_20_3.txt   20    3     4     40.3988  12 11 2 6  259  µs
-MAXDIV/max_div_20_3.txt   20    3     5     67.4848  12 11 2 6 10 383  µs
+MAXDIV/max_div_20_3.txt   20    3     2     3.1499  12 11      152  µs
+MAXDIV/max_div_20_3.txt   20    3     3     23.5386  12 11 2    322  µs
+MAXDIV/max_div_20_3.txt   20    3     4     40.3988  12 11 2 6  279  µs
+MAXDIV/max_div_20_3.txt   20    3     5     67.4848  12 11 2 6 10 344  µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_30_3.txt   30    3     2     2.2091  13 7       240  µs
-MAXDIV/max_div_30_3.txt   30    3     3     16.9325  13 7 26    295  µs
-MAXDIV/max_div_30_3.txt   30    3     4     28.0364  13 7 26 2  382  µs
-MAXDIV/max_div_30_3.txt   30    3     5     59.5942  13 7 26 2 16 463  µs
+MAXDIV/max_div_30_3.txt   30    3     2     2.2091  13 7       238  µs
+MAXDIV/max_div_30_3.txt   30    3     3     16.9325  13 7 26    305  µs
+MAXDIV/max_div_30_3.txt   30    3     4     28.0364  13 7 26 2  396  µs
+MAXDIV/max_div_30_3.txt   30    3     5     59.5942  13 7 26 2 16 489  µs
 ------------------------------------------------------------------------------------
-                                Busqueda Local
+                Busqueda Local
 Problema                  n     K     m     z        S          CPU
-MAXDIV/max_div_15_2.txt   15    2     2     30.4841  0 8        25   µs
-MAXDIV/max_div_15_2.txt   15    2     3     73.6973  0 8 13     38   µs
-MAXDIV/max_div_15_2.txt   15    2     4     124.6453  0 8 13 10  38   µs
-MAXDIV/max_div_15_2.txt   15    2     5     181.9332  8 13 10 0  44   µs
+MAXDIV/max_div_15_2.txt   15    2     2     11.8592  6 8        115  µs
+MAXDIV/max_div_15_2.txt   15    2     3     25.7318  5 8 13     71   µs
+MAXDIV/max_div_15_2.txt   15    2     4     43.7567  0 8 13 10  43   µs
+MAXDIV/max_div_15_2.txt   15    2     5     71.6520  1 8 13 10 0 68   µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_20_2.txt   20    2     2     17.6271  0 13       20   µs
-MAXDIV/max_div_20_2.txt   20    2     3     41.6424  0 13 10    30   µs
-MAXDIV/max_div_20_2.txt   20    2     4     87.2758  0 13 10 2  60   µs
-MAXDIV/max_div_20_2.txt   20    2     5     133.2410  0 13 10 2 7 56   µs
+MAXDIV/max_div_20_2.txt   20    2     2     8.1963  8 13       53   µs
+MAXDIV/max_div_20_2.txt   20    2     3     14.5992  0 13 10    31   µs
+MAXDIV/max_div_20_2.txt   20    2     4     34.5029  1 13 10 2  149  µs
+MAXDIV/max_div_20_2.txt   20    2     5     44.8354  0 13 10 2 7 61   µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_30_2.txt   30    2     2     27.1695  0 8        25   µs
-MAXDIV/max_div_30_2.txt   30    2     3     70.2865  0 8 29     34   µs
-MAXDIV/max_div_30_2.txt   30    2     4     127.1656  0 8 29 10  65   µs
-MAXDIV/max_div_30_2.txt   30    2     5     186.6335  0 8 29 10 13 61   µs
+MAXDIV/max_div_30_2.txt   30    2     2     11.6571  27 8       221  µs
+MAXDIV/max_div_30_2.txt   30    2     3     27.1012  1 8 29     46   µs
+MAXDIV/max_div_30_2.txt   30    2     4     50.8481  1 8 29 10  65   µs
+MAXDIV/max_div_30_2.txt   30    2     5     64.5790  0 8 29 10 13 65   µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_15_3.txt   15    3     2     15.8829  0 8        19   µs
-MAXDIV/max_div_15_3.txt   15    3     3     88.7318  0 8 11     107  µs
-MAXDIV/max_div_15_3.txt   15    3     4     161.2876  0 8 11 13  64   µs
-MAXDIV/max_div_15_3.txt   15    3     5     239.5259  0 8 11 13 2 67   µs
+MAXDIV/max_div_15_3.txt   15    3     2     6.1965  1 8        25   µs
+MAXDIV/max_div_15_3.txt   15    3     3     30.9867  3 8 11     65   µs
+MAXDIV/max_div_15_3.txt   15    3     4     55.8006  0 8 11 13  50   µs
+MAXDIV/max_div_15_3.txt   15    3     5     80.8783  0 8 11 13 2 210  µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_20_3.txt   20    3     2     16.4730  0 11       21   µs
-MAXDIV/max_div_20_3.txt   20    3     3     72.2886  0 11 2     32   µs
-MAXDIV/max_div_20_3.txt   20    3     4     121.6421  0 11 2 6   64   µs
-MAXDIV/max_div_20_3.txt   20    3     5     200.7774  0 11 2 6 10 67   µs
+MAXDIV/max_div_20_3.txt   20    3     2     10.1731  0 11       23   µs
+MAXDIV/max_div_20_3.txt   20    3     3     25.2114  0 11 2     35   µs
+MAXDIV/max_div_20_3.txt   20    3     4     40.8445  0 11 2 6   52   µs
+MAXDIV/max_div_20_3.txt   20    3     5     72.1271  3 11 2 6 10 149  µs
 ------------------------------------------------------------------------------------
-MAXDIV/max_div_30_3.txt   30    3     2     13.2228  0 7        26   µs
-MAXDIV/max_div_30_3.txt   30    3     3     55.8876  0 7 26     38   µs
-MAXDIV/max_div_30_3.txt   30    3     4     94.5910  0 7 26 2   54   µs
-MAXDIV/max_div_30_3.txt   30    3     5     190.4049  0 7 26 2 16 76   µs
+MAXDIV/max_div_30_3.txt   30    3     2     8.8046  0 7        29   µs
+MAXDIV/max_div_30_3.txt   30    3     3     22.0225  0 7 26     41   µs
+MAXDIV/max_div_30_3.txt   30    3     4     38.5183  0 7 26 2   58   µs
+MAXDIV/max_div_30_3.txt   30    3     5     71.2165  0 7 26 2 16 80   µs
 ------------------------------------------------------------------------------------
