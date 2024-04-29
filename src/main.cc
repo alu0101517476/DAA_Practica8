@@ -118,7 +118,6 @@ int main() {
       "MAXDIV/max_div_15_2.txt", "MAXDIV/max_div_20_2.txt",
       "MAXDIV/max_div_30_2.txt", "MAXDIV/max_div_15_3.txt",
       "MAXDIV/max_div_20_3.txt", "MAXDIV/max_div_30_3.txt"};
-  /*
   std::cout << "\t\tAlgoritmo Voraz" << std::endl;
   printf("%-25s %-5s %-5s %-5s %-3s %6s %12s\n", "Problema", "n", "K", "m", "z",
          "S", "CPU");
@@ -131,7 +130,6 @@ int main() {
   for (const auto& problema : problemas) {
     imprimirTablaResultados1BusquedaLocal(problema);
   }
-  */
   std::cout << "\t\tAlgoritmo GRASP" << std::endl;
   printf("%-25s %-5s %-5s %-5s %-3s %6s %5s %8s %21s\n", "Problema", "n", "K",
          "m", "ITER", "|LRC|", "z", "S", "CPU");
@@ -144,12 +142,5 @@ int main() {
   for (const auto& problema : problemas) {
     imprimirTablasResultados2y3GRASP(problema);
   }
-  /*
-   std::cout << "\t\tAlgoritmo Busqueda Tabu" << std::endl;
-   printf("%-25s %-5s %-5s %-5s %-3s %6s %12s\n", "Problema", "n", "K", "m",
-   "z", "S", "CPU"); for (const auto& problema : problemas) {
-     imprimirTablaResultados1BusquedaTabu(problema);
-   }
-  */
   return 0;
 }
