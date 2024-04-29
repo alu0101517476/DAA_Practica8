@@ -8,7 +8,8 @@ double Solucion::calcularFuncionObjetivo() {
   funcion_objetivo_ = 0;
   for (int i{0}; i < solucion_.size(); ++i) {
     for (int j{i + 1}; j < solucion_.size(); ++j) {
-      funcion_objetivo_ += calcularDistanciaEuclidea(solucion_[i], solucion_[j]);
+      funcion_objetivo_ +=
+          calcularDistanciaEuclidea(solucion_[i], solucion_[j]);
     }
   }
   return funcion_objetivo_;
@@ -33,8 +34,14 @@ void Solucion::setFuncionObjetivo(const double& funcion_objetivo) {
   funcion_objetivo_ = funcion_objetivo;
 }
 
-Punto Solucion::operator[](const int& indice) {
-  return solucion_[indice];
+Punto Solucion::operator[](const int& indice) { return solucion_[indice]; }
+
+bool Solucion::operator<(const Solucion& solucion) const {
+  return funcion_objetivo_ < solucion.getFuncionObjetivo();
+}
+
+bool Solucion::operator>(const Solucion& solucion) const {
+  return funcion_objetivo_ > solucion.getFuncionObjetivo();
 }
 
 std::ostream& operator<<(std::ostream& os, const Solucion& solucion) {

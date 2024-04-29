@@ -14,12 +14,15 @@ class Solucion {
   void agregarPunto(const Punto& punto);
   double calcularFuncionObjetivo();
   std::vector<Punto> getSolucion() const { return solucion_; }
+  std::vector<Punto>& getSolucion() { return solucion_; }
   double getFuncionObjetivo() const { return funcion_objetivo_; }
   bool seEncuentraEnLaSolucion(const Punto& punto);
   void eliminarPuntoSolucion(const Punto& punto);
   void agregarPuntoSolucion(const Punto& punto, const int& indice);
   void setFuncionObjetivo(const double& funcion_objetivo);
   Punto operator[](const int& indice);
+  bool operator<(const Solucion& solucion) const;
+  bool operator>(const Solucion& solucion) const;
   friend std::ostream& operator<<(std::ostream& os, const Solucion& solucion);
 
  private:

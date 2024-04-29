@@ -12,6 +12,7 @@ class Problema {
   Problema(const std::string& nombre_fichero_puntos, int size_solucion);
   Punto operator[](const int& identificador);
   std::vector<Punto> getListaPuntos() const { return lista_puntos_; }
+  std::vector<Punto>& getListaPuntos() { return lista_puntos_; }
   int getSizeSolucion() const { return size_solucion_; }
   int getNumeroPuntos() const { return numero_puntos_; }
   int getDimensionPuntos() const { return dimension_puntos_; }

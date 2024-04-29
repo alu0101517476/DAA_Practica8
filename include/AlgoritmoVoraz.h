@@ -4,6 +4,7 @@
 #include "Herramientas.h"
 #include "Algoritmo.h"
 #include "Solucion.h"
+#include "BusquedaLocal.h"
 
 class AlgoritmoVoraz : public Algoritmo {
  public:
@@ -11,8 +12,10 @@ class AlgoritmoVoraz : public Algoritmo {
       : problema_{nombre_fichero_puntos, size_solucion},
         solucion_algoritmo_{} {}
   Solucion resolver();
+  Solucion getSolucion() const { return solucion_algoritmo_; }
   Solucion& getSolucion() { return solucion_algoritmo_; }
-  Problema getProblema() { return problema_; }
+  Problema getProblema() const { return problema_; }
+  Problema& getProblema() { return problema_; }
 
  private:
   Problema problema_;

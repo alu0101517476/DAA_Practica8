@@ -53,3 +53,15 @@ void imprimirDatosTabla(int size_solucion, const Solucion& solucion,
   printf("%.4f %-11s %-5ldµs\n", solucion.getFuncionObjetivo(),
          pasarPuntosString(solucion).c_str(), tiempo_ejecucion);
 }
+
+void imprimirDatosTablas2y3(int size_solucion, const Solucion& solucion,
+                            const Problema& problema, int maximo_iteraciones,
+                            int size_lrc, const std::string& nombre_fichero,
+                            int tiempo_ejecucion) {
+  //  Problema   n    k    m   ITER |LRC|  z    S     CPU
+  printf("%-25s %-5d %-5d %-6d %-6d %-6d  %.4lf %-20s %-5ldµs\n",
+         nombre_fichero.c_str(), problema.getNumeroPuntos(),
+         problema.getDimensionPuntos(), size_solucion, maximo_iteraciones,
+         size_lrc, solucion.getFuncionObjetivo(),
+         pasarPuntosString(solucion).c_str(), tiempo_ejecucion);
+}

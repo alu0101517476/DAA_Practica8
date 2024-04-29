@@ -1,12 +1,12 @@
 #pragma once
 
 #include <chrono>
-#include <vector>
 #include <fstream>
+#include <vector>
 
-#include "Solucion.h"
 #include "Problema.h"
 #include "Punto.h"
+#include "Solucion.h"
 
 class Solucion;
 
@@ -22,6 +22,11 @@ void imprimirTablaResultados1(const std::string& nombre_problema);
 std::string pasarPuntosString(const Solucion& solucion);
 
 void imprimirDatosTabla(int size_solucion, const Solucion& solucion,
-                              const Problema& problema,
-                              const std::string& nombre_fichero,
-                              int tiempo_ejecucion);
+                        const Problema& problema,
+                        const std::string& nombre_fichero,
+                        int tiempo_ejecucion);
+
+void imprimirDatosTablas2y3(int size_solucion, const Solucion& solucion,
+                            const Problema& problema, int maximo_iteraciones,
+                            int size_lrc, const std::string& nombre_fichero,
+                            int tiempo_ejecucion);
