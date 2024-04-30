@@ -2,7 +2,7 @@
 
 void AlgoritmoBusquedaTabu::inicializar(Solucion& mejor_solucion,
                                         Solucion& solucion_actual) {
-  AlgoritmoGrasp grasp{nombre_fichero_puntos_, problema_.getSizeSolucion()};
+  AlgoritmoGrasp grasp{nombre_fichero_puntos_, problema_.getSizeSolucion(), 3};
   solucion_actual = grasp.resolver();
   mejor_solucion = solucion_actual;
 }
@@ -21,7 +21,7 @@ Solucion AlgoritmoBusquedaTabu::obtenerMejorVecino(
 }
 
 void AlgoritmoBusquedaTabu::decrementarTenenciaTabu(int iteracion_actual) {
-    for (auto it = lista_tabu_.begin(); it != lista_tabu_.end();) {
+    for (auto it = lista_tabu_.begin(); it != lista_tabu_.end(); ++it) {
     bool eliminar = true;
     for (int i = 0; i < it->first.getSolucion().size(); ++i) {
       if (contador_antiguedad_[i] + tenencia_tabu_ > iteracion_actual) {
@@ -29,11 +29,7 @@ void AlgoritmoBusquedaTabu::decrementarTenenciaTabu(int iteracion_actual) {
         break;
       }
     }
-    if (eliminar) {
-      it = lista_tabu_.erase(it);
-    } else {
-      ++it;
-    }
+    if (eliminar) it = lista_tabu_.erase(it);
   }
 }
 
@@ -52,6 +48,7 @@ Solucion AlgoritmoBusquedaTabu::resolver() {
         obtenerMejorVecino(vecindario, lista_tabu_, mejor_solucion)};
     solucion_actual = mejor_vecino;
     lista_tabu_[mejor_vecino] = tenencia_tabu_;
+    // Paso3: Actualización si mejora
     if (mejor_vecino > mejor_solucion) {
       mejor_solucion = mejor_vecino;
       iteraciones = 0;
