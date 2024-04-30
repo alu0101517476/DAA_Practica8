@@ -21,7 +21,7 @@ Solucion AlgoritmoBusquedaTabu::obtenerMejorVecino(
 }
 
 void AlgoritmoBusquedaTabu::decrementarTenenciaTabu(int iteracion_actual) {
-    for (auto it = lista_tabu_.begin(); it != lista_tabu_.end(); ++it) {
+    for (auto it = lista_tabu_.begin(); it != lista_tabu_.end();) {
     bool eliminar = true;
     for (int i = 0; i < it->first.getSolucion().size(); ++i) {
       if (contador_antiguedad_[i] + tenencia_tabu_ > iteracion_actual) {
@@ -29,7 +29,7 @@ void AlgoritmoBusquedaTabu::decrementarTenenciaTabu(int iteracion_actual) {
         break;
       }
     }
-    if (eliminar) it = lista_tabu_.erase(it);
+    (eliminar) ? it = lista_tabu_.erase(it) : ++it;
   }
 }
 

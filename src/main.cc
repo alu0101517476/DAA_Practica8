@@ -65,7 +65,7 @@ void imprimirTablasResultados2y3GRASP(const std::string& nombre_problema) {
     }
   }
   std::cout << "---------------------------------------------------------------"
-               "---------------------"
+               "------------------------------------------------"
             << std::endl;
 }
 
@@ -88,7 +88,7 @@ void imprimirTablasResultados4y5BusquedaTabu(const std::string& nombre_problema)
     }
   }
   std::cout << "---------------------------------------------------------------"
-               "---------------------"
+               "------------------------------------------------"
             << std::endl;
 }
 
@@ -140,7 +140,7 @@ int main() {
   printf("%-25s %-5s %-5s %-5s %-3s %6s %5s %8s %21s\n", "Problema", "n", "K",
          "m", "ITER", "Tabutenure", "z", "S", "CPU");
   for (const auto& problema : problemas) {
-    imprimirTablasResultados2y3GRASP(problema);
+    imprimirTablasResultados4y5BusquedaTabu(problema);
   }
   return 0;
 }
