@@ -28,6 +28,24 @@ Problema::Problema(const std::string& nombre_fichero_puntos, int size_solucion) 
   fichero_puntos.close();
 }
 
+std::vector<Punto> Problema::obtenerPuntosSinProcesar(const std::vector<Punto> puntos_procesados) const {
+  std::unordered_set<int> identificadores_puntos_procesados;
+  // Insertamos los identificadores de los puntos procesados en el conjunto
+  for (const auto& punto_procesado : puntos_procesados) {
+    identificadores_puntos_procesados.insert(punto_procesado.getIdentificador());
+  }
+
+  std::vector<Punto> puntos_sin_procesar;
+  // Metemos todos los puntos que no han sido procesados en el vector
+  for (const auto& punto : lista_puntos_) {
+    if (identificadores_puntos_procesados.find(punto.getIdentificador()) == identificadores_puntos_procesados.end()) {
+      puntos_sin_procesar.push_back(punto);
+    }
+  }
+  return puntos_sin_procesar;
+}
+
+
 Punto Problema::operator[](const int& identificador) {
   return lista_puntos_[identificador];
 }

@@ -6,6 +6,7 @@
 #include "../include/BusquedaLocal.h"
 #include "../include/Problema.h"
 #include "../include/Solucion.h"
+#include "../include/RamificacionYPoda/AlgoritmoRamificacionYPoda.h"
 
 void imprimirTablaResultados1Voraz(const std::string& nombre_problema) {
   for (int i{2}; i <= 5; ++i) {
@@ -118,6 +119,7 @@ int main() {
       "MAXDIV/max_div_15_2.txt", "MAXDIV/max_div_20_2.txt",
       "MAXDIV/max_div_30_2.txt", "MAXDIV/max_div_15_3.txt",
       "MAXDIV/max_div_20_3.txt", "MAXDIV/max_div_30_3.txt"};
+  /*
   std::cout << "\t\tAlgoritmo Voraz" << std::endl;
   printf("%-25s %-5s %-5s %-5s %-3s %6s %12s\n", "Problema", "n", "K", "m", "z",
          "S", "CPU");
@@ -141,6 +143,14 @@ int main() {
          "m", "ITER", "Tabutenure", "z", "S", "CPU");
   for (const auto& problema : problemas) {
     imprimirTablasResultados2y3GRASP(problema);
+  }
+  */
+  for (const auto& problema : problemas) {
+    AlgoritmoVoraz voraz{problema, 2};
+    std::cout << voraz.resolver() << std::endl;
+    AlgoritmoRamificacionYPoda ramificacion{problema, voraz.getSolucion(), 2, 1};
+    std::cout << ramificacion.resolver() << std::endl;
+
   }
   return 0;
 }

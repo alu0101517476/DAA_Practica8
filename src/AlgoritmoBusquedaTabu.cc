@@ -2,7 +2,7 @@
 
 void AlgoritmoBusquedaTabu::inicializar(Solucion& mejor_solucion,
                                         Solucion& solucion_actual) {
-  AlgoritmoGrasp grasp{nombre_fichero_puntos_, problema_.getSizeSolucion()};
+  AlgoritmoGrasp grasp{nombre_fichero_puntos_, problema_.getSizeSolucion(), 3};
   solucion_actual = grasp.resolver();
   mejor_solucion = solucion_actual;
 }

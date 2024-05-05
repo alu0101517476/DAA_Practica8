@@ -20,6 +20,7 @@ class Solucion {
   void eliminarPuntoSolucion(const Punto& punto);
   void agregarPuntoSolucion(const Punto& punto, const int& indice);
   void setFuncionObjetivo(const double& funcion_objetivo);
+  Solucion operator=(const Solucion& solucion);
   Punto operator[](const int& indice);
   bool operator<(const Solucion& solucion) const;
   bool operator>(const Solucion& solucion) const;

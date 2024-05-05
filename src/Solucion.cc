@@ -34,6 +34,12 @@ void Solucion::setFuncionObjetivo(const double& funcion_objetivo) {
   funcion_objetivo_ = funcion_objetivo;
 }
 
+Solucion Solucion::operator=(const Solucion& solucion) {
+  solucion_ = solucion.getSolucion();
+  funcion_objetivo_ = solucion.getFuncionObjetivo();
+  return *this;
+}
+
 Punto Solucion::operator[](const int& indice) { return solucion_[indice]; }
 
 bool Solucion::operator<(const Solucion& solucion) const {
