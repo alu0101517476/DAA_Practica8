@@ -29,11 +29,7 @@ void AlgoritmoBusquedaTabu::decrementarTenenciaTabu(int iteracion_actual) {
         break;
       }
     }
-    if (eliminar) {
-      it = lista_tabu_.erase(it);
-    } else {
-      ++it;
-    }
+    (eliminar) ? it = lista_tabu_.erase(it) : ++it;
   }
 }
 
@@ -52,6 +48,7 @@ Solucion AlgoritmoBusquedaTabu::resolver() {
         obtenerMejorVecino(vecindario, lista_tabu_, mejor_solucion)};
     solucion_actual = mejor_vecino;
     lista_tabu_[mejor_vecino] = tenencia_tabu_;
+    // Paso3: Actualización si mejora
     if (mejor_vecino > mejor_solucion) {
       mejor_solucion = mejor_vecino;
       iteraciones = 0;
